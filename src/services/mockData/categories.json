@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "name": "PDF Tools",
+    "icon": "FileText",
+    "color": "#EF4444",
+    "toolCount": 22,
+    "description": "Convert, merge, and manipulate PDF files"
+  },
+  {
+    "Id": 2,
+    "name": "Image Tools",
+    "icon": "Image",
+    "color": "#10B981",
+    "toolCount": 10,
+    "description": "Compress, resize, and edit images"
+  },
+  {
+    "Id": 3,
+    "name": "Text & Content",
+    "icon": "Type",
+    "color": "#3B82F6",
+    "toolCount": 10,
+    "description": "Text manipulation and content generation"
+  },
+  {
+    "Id": 4,
+    "name": "SEO & Website",
+    "icon": "Search",
+    "color": "#8B5CF6",
+    "toolCount": 7,
+    "description": "SEO analysis and website tools"
+  },
+  {
+    "Id": 5,
+    "name": "Financial Calculators",
+    "icon": "Calculator",
+    "color": "#F59E0B",
+    "toolCount": 7,
+    "description": "Personal finance and business calculators"
+  },
+  {
+    "Id": 6,
+    "name": "Developer Tools",
+    "icon": "Code",
+    "color": "#EC4899",
+    "toolCount": 4,
+    "description": "Programming and design utilities"
+  },
+  {
+    "Id": 7,
+    "name": "Daily Utility",
+    "icon": "Wrench",
+    "color": "#06B6D4",
+    "toolCount": 4,
+    "description": "Everyday calculators and converters"
+  },
+  {
+    "Id": 8,
+    "name": "India-Specific",
+    "icon": "MapPin",
+    "color": "#F97316",
+    "toolCount": 5,
+    "description": "Tools for Indian services and data"
+  }
+]
