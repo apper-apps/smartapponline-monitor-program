@@ -39,6 +39,35 @@ const Header = ({ onMenuToggle }) => {
           <div className="hidden md:block flex-1 max-w-lg mx-8">
             <SearchBar />
           </div>
+{/* Navigation Menu */}
+          <nav className="hidden lg:flex items-center space-x-6">
+            <Link to="/" className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">
+              About Us
+            </Link>
+            <Link to="/contact" className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">
+              Contact
+            </Link>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1">
+                <span>Legal</span>
+                <ApperIcon name="ChevronDown" size={16} />
+              </button>
+              <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link to="/privacy" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+                <Link to="/disclaimer" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200">
+                  Disclaimer
+                </Link>
+                <Link to="/terms" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200">
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
+          </nav>
 
           {/* Actions */}
           <div className="flex items-center space-x-3">
