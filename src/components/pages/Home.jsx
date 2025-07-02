@@ -81,8 +81,20 @@ const Home = () => {
           
           <div className="max-w-lg mx-auto">
             <SearchBar placeholder="Search from 69+ tools..." />
-          </div>
+</div>
         </motion.div>
+      </section>
+
+      {/* AdSense Banner Ad */}
+      <section className="flex justify-center">
+        <div className="w-full max-w-4xl">
+          <ins className="adsbygoogle block"
+               style={{ display: 'block' }}
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+               data-ad-slot="1234567890"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </div>
       </section>
 
       {/* Stats Section */}
@@ -163,7 +175,19 @@ const Home = () => {
           >
             Start Using Tools Now
           </Button>
-        </motion.div>
+</motion.div>
+      </section>
+
+      {/* AdSense Rectangle Ad */}
+      <section className="flex justify-center py-8">
+        <div className="w-full max-w-md">
+          <ins className="adsbygoogle block"
+               style={{ display: 'block' }}
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+               data-ad-slot="0987654321"
+               data-ad-format="rectangle"
+               data-full-width-responsive="true"></ins>
+        </div>
       </section>
     </div>
   )

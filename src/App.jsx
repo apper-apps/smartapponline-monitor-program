@@ -17,7 +17,7 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Layout>
-          <Routes>
+<Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
@@ -25,6 +25,7 @@ function App() {
             <Route path="/terms" element={<TermsConditions />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/category/:categoryId" element={<CategoryView />} />
+            <Route path="/tools/:toolId" element={<ToolInterface />} />
           </Routes>
         </Layout>
         <ToastContainer

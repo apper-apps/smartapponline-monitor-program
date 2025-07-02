@@ -156,8 +156,20 @@ const CategoryView = () => {
           message="This category doesn't have any tools yet. Check back soon for updates!"
           actionText="Browse Other Categories"
           onAction={() => navigate('/')}
-        />
+/>
       )}
+
+      {/* AdSense Sidebar Ad */}
+      <section className="flex justify-center mt-8">
+        <div className="w-full max-w-xs">
+          <ins className="adsbygoogle block"
+               style={{ display: 'block' }}
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+               data-ad-slot="1122334455"
+               data-ad-format="vertical"
+               data-full-width-responsive="true"></ins>
+        </div>
+      </section>
     </div>
   )
 }
