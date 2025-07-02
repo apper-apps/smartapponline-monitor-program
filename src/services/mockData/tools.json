@@ -25,9 +25,8 @@
     "usageCount": 12330,
     "featured": false,
     "implemented": false
-  },
+},
   {
-{
     "Id": 3,
     "name": "PDF to JPG",
     "categoryId": 1,
@@ -41,9 +40,9 @@
     "usageCount": 18750,
     "featured": true,
     "implemented": true
+  },
   {
-{
-    "Id": 4,
+"Id": 4,
     "name": "JPG to PDF",
     "categoryId": 1,
     "description": "Convert JPG images to PDF documents",
@@ -56,6 +55,7 @@
     "usageCount": 22100,
     "featured": true,
     "implemented": true
+  },
   {
     "Id": 5,
     "name": "PNG to PDF",
@@ -80,7 +80,6 @@
     "featured": true,
     "implemented": false
   },
-  {
 {
     "Id": 7,
     "name": "Image Compressor",
@@ -95,6 +94,7 @@
     "usageCount": 25600,
     "featured": true,
     "implemented": true
+  },
   {
     "Id": 8,
     "name": "Image Resizer",
@@ -119,7 +119,6 @@
     "featured": false,
     "implemented": false
   },
-  {
 {
     "Id": 10,
     "name": "QR Code Generator",
@@ -134,9 +133,9 @@
     "usageCount": 31200,
     "featured": true,
     "implemented": true
+  },
   {
-{
-    "Id": 11,
+"Id": 11,
     "name": "Password Generator",
     "categoryId": 3,
     "description": "Create strong, secure passwords",
@@ -149,9 +148,9 @@
     "usageCount": 28400,
     "featured": true,
     "implemented": true
+  },
   {
-{
-    "Id": 12,
+"Id": 12,
     "name": "Word Counter",
     "categoryId": 3,
     "description": "Count words, characters, and paragraphs",
@@ -164,6 +163,7 @@
     "usageCount": 21300,
     "featured": true,
     "implemented": true
+  },
   {
     "Id": 13,
     "name": "Case Converter",
@@ -188,7 +188,6 @@
     "featured": false,
     "implemented": false
   },
-  {
 {
     "Id": 15,
     "name": "JSON Formatter",
@@ -203,6 +202,7 @@
     "usageCount": 19700,
     "featured": true,
     "implemented": true
+  },
   {
     "Id": 16,
     "name": "CSS Gradient Generator",
@@ -215,7 +215,6 @@
     "featured": false,
     "implemented": false
   },
-  {
 {
     "Id": 17,
     "name": "Age Calculator",
@@ -230,6 +229,7 @@
     "usageCount": 24300,
     "featured": true,
     "implemented": true
+  },
   {
     "Id": 18,
     "name": "BMI Calculator",
@@ -242,7 +242,6 @@
     "featured": false,
     "implemented": false
   },
-  {
 {
     "Id": 19,
     "name": "Unit Converter",
@@ -257,6 +256,7 @@
     "usageCount": 22100,
     "featured": true,
     "implemented": true
+  },
   {
     "Id": 20,
     "name": "GST Calculator",
