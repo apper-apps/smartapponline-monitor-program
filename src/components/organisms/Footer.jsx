@@ -96,18 +96,6 @@ const Footer = () => {
               Made with <ApperIcon name="Heart" size={16} className="inline mx-1 text-red-500" /> for productivity
             </p>
           </div>
-</div>
-
-        {/* AdSense Footer Ad */}
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <div className="flex justify-center">
-            <ins className="adsbygoogle block"
-                 style={{ display: 'block' }}
-                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-                 data-ad-slot="6677889900"
-                 data-ad-format="horizontal"
-                 data-full-width-responsive="true"></ins>
-          </div>
         </div>
       </div>
     </footer>
