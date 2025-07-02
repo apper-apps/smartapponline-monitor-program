@@ -102,10 +102,10 @@ const ToolInterface = () => {
 
 return (
     <>
-      <Helmet>
+<Helmet>
         <title>{tool ? `${tool.name} - ${tool.description} | SmartAppOnline` : 'Tool Interface | SmartAppOnline'}</title>
-        <meta name="description" content={tool ? `${tool.description}. Free online tool with ${tool.usageCount.toLocaleString()} uses.` : 'Access powerful online tools for document conversion, image processing, and more.'} />
-        <meta name="keywords" content={tool ? `${tool.name.toLowerCase()}, ${tool.description.toLowerCase()}, online tool, free tool` : 'online tools, free tools, web applications'} />
+        <meta name="description" content={tool ? `${tool.description}. Free online tool with ${tool.usageCount?.toLocaleString() || '0'} uses.` : 'Access powerful online tools for document conversion, image processing, and more.'} />
+        <meta name="keywords" content={tool ? `${tool.name?.toLowerCase() || ''}, ${tool.description?.toLowerCase() || ''}, online tool, free tool` : 'online tools, free tools, web applications'} />
         <meta property="og:title" content={tool ? `${tool.name} - Free Online Tool` : 'Tool Interface'} />
         <meta property="og:description" content={tool ? tool.description : 'Access powerful online tools'} />
         <meta property="og:type" content="website" />
@@ -128,10 +128,10 @@ return (
                 "price": "0",
                 "priceCurrency": "USD"
               },
-              "aggregateRating": {
+"aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
-                "ratingCount": tool.usageCount,
+                "ratingCount": tool.usageCount || 0,
                 "bestRating": "5",
                 "worstRating": "1"
               }
@@ -163,9 +163,9 @@ return (
               {tool.description}
             </p>
             <div className="flex items-center space-x-4 text-sm text-gray-500">
-              <span className="flex items-center">
+<span className="flex items-center">
                 <ApperIcon name="Users" size={16} className="mr-1" />
-                {tool.usageCount.toLocaleString()} uses
+                {tool.usageCount?.toLocaleString() || '0'} uses
               </span>
               <span className="flex items-center">
                 <div className={`w-2 h-2 rounded-full mr-2 ${tool.implemented ? 'bg-green-400' : 'bg-gray-300'}`}></div>
