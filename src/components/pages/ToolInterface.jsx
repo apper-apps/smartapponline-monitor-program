@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
@@ -100,48 +99,9 @@ const ToolInterface = () => {
   if (error) return <Error message={error} onRetry={loadTool} />
   if (!tool) return <Error message="Tool not found" />
 
-return (
-    <>
-<Helmet>
-        <title>{tool ? `${tool.name} - ${tool.description} | SmartAppOnline` : 'Tool Interface | SmartAppOnline'}</title>
-        <meta name="description" content={tool ? `${tool.description}. Free online tool with ${tool.usageCount?.toLocaleString() || '0'} uses.` : 'Access powerful online tools for document conversion, image processing, and more.'} />
-        <meta name="keywords" content={tool ? `${tool.name?.toLowerCase() || ''}, ${tool.description?.toLowerCase() || ''}, online tool, free tool` : 'online tools, free tools, web applications'} />
-        <meta property="og:title" content={tool ? `${tool.name} - Free Online Tool` : 'Tool Interface'} />
-        <meta property="og:description" content={tool ? tool.description : 'Access powerful online tools'} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={tool ? `${tool.name} - Free Online Tool` : 'Tool Interface'} />
-        <meta name="twitter:description" content={tool ? tool.description : 'Access powerful online tools'} />
-        <link rel="canonical" href={`${window.location.origin}/tools/${toolId}`} />
-        {tool && (
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebApplication",
-              "name": tool.name,
-              "description": tool.description,
-              "url": `${window.location.origin}/tools/${toolId}`,
-              "applicationCategory": "UtilityApplication",
-              "operatingSystem": "Any",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-              },
-"aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": tool.usageCount || 0,
-                "bestRating": "5",
-                "worstRating": "1"
-              }
-            })}
-          </script>
-        )}
-      </Helmet>
-      
-      <div className="space-y-8">
-        {/* Tool Header */}
+  return (
+    <div className="space-y-8">
+      {/* Tool Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -163,9 +123,9 @@ return (
               {tool.description}
             </p>
             <div className="flex items-center space-x-4 text-sm text-gray-500">
-<span className="flex items-center">
+              <span className="flex items-center">
                 <ApperIcon name="Users" size={16} className="mr-1" />
-                {tool.usageCount?.toLocaleString() || '0'} uses
+                {tool.usageCount.toLocaleString()} uses
               </span>
               <span className="flex items-center">
                 <div className={`w-2 h-2 rounded-full mr-2 ${tool.implemented ? 'bg-green-400' : 'bg-gray-300'}`}></div>
@@ -211,9 +171,8 @@ return (
         transition={{ delay: 0.2 }}
       >
         {renderToolComponent()}
-</motion.div>
-      </div>
-    </>
+      </motion.div>
+    </div>
   )
 }
 

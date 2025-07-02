@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import FileUpload from '@/components/molecules/FileUpload'
+
 const PdfToJpgTool = () => {
   const [file, setFile] = useState(null)
   const [processing, setProcessing] = useState(false)
@@ -58,39 +58,9 @@ const PdfToJpgTool = () => {
     setProcessing(false)
   }
 
-return (
-    <>
-      <Helmet>
-        <title>PDF to JPG Converter - Convert PDF Pages to Images Online | SmartAppOnline</title>
-        <meta name="description" content="Free online PDF to JPG converter. Convert PDF pages to high-quality JPG images with adjustable quality settings. Fast and secure processing." />
-        <meta name="keywords" content="PDF to JPG, PDF to image, convert PDF pages, PDF converter, extract images from PDF, online converter" />
-        <meta property="og:title" content="PDF to JPG Converter - Free Online Tool" />
-        <meta property="og:description" content="Convert PDF pages to JPG images online. Free, fast, and secure PDF to image converter." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PDF to JPG Converter - Free Online Tool" />
-        <meta name="twitter:description" content="Convert PDF pages to JPG images online. Free and secure." />
-        <link rel="canonical" href={`${window.location.origin}/tools/3`} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "PDF to JPG Converter",
-            "description": "Convert PDF pages to high-quality JPG images online",
-            "url": `${window.location.origin}/tools/3`,
-            "applicationCategory": "UtilityApplication",
-            "operatingSystem": "Any",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            }
-          })}
-        </script>
-      </Helmet>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Input Section */}
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
@@ -235,9 +205,8 @@ return (
             <p>Upload a PDF file to convert pages to JPG</p>
           </div>
         )}
-</Card>
-      </div>
-    </>
+      </Card>
+    </div>
   )
 }
 

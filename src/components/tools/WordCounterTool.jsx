@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react'
-import { Helmet } from 'react-helmet-async'
 import ApperIcon from '@/components/ApperIcon'
 import Card from '@/components/atoms/Card'
 import Button from '@/components/atoms/Button'
+
 const WordCounterTool = () => {
   const [text, setText] = useState('')
 
@@ -60,48 +60,9 @@ const WordCounterTool = () => {
 
   const readability = getReadabilityScore()
 
-return (
-    <>
-      <Helmet>
-        <title>Word Counter - Count Words, Characters, Paragraphs Online | SmartAppOnline</title>
-        <meta name="description" content="Free online word counter tool. Count words, characters, sentences, paragraphs, and reading time. Includes readability analysis and social media limits." />
-        <meta name="keywords" content="word counter, character counter, word count tool, text analysis, readability checker, writing tool, text statistics" />
-        <meta property="og:title" content="Word Counter - Count Words & Characters Online" />
-        <meta property="og:description" content="Count words, characters, sentences and analyze text readability. Free online writing tool." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Word Counter - Count Words & Characters" />
-        <meta name="twitter:description" content="Count words, characters, sentences and analyze text. Free online tool." />
-        <link rel="canonical" href={`${window.location.origin}/tools/12`} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Word Counter",
-            "description": "Count words, characters, sentences, paragraphs, and analyze text readability",
-            "url": `${window.location.origin}/tools/12`,
-            "applicationCategory": "ProductivityApplication",
-            "operatingSystem": "Any",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "featureList": [
-              "Word counting",
-              "Character counting",
-              "Sentence counting",
-              "Paragraph counting",
-              "Reading time estimation",
-              "Readability analysis",
-              "Social media limits check"
-            ]
-          })}
-        </script>
-      </Helmet>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Text Input */}
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {/* Text Input */}
       <div className="lg:col-span-2">
         <Card>
           <div className="flex items-center justify-between mb-6">
@@ -279,9 +240,8 @@ return (
             </div>
           </div>
         </Card>
-</div>
       </div>
-    </>
+    </div>
   )
 }
 

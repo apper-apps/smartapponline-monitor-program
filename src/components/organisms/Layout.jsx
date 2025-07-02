@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from '@/components/organisms/Header'
 import Sidebar from '@/components/organisms/Sidebar'
-import Footer from '@/components/organisms/Footer'
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -15,11 +14,11 @@ const Layout = () => {
     setSidebarOpen(false)
   }
 
-return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Header onMenuToggle={handleMenuToggle} />
       
-      <div className="flex flex-1">
+      <div className="flex">
         <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />
         
         <main className="flex-1 lg:ml-0">
@@ -28,8 +27,6 @@ return (
           </div>
         </main>
       </div>
-      
-      <Footer />
     </div>
   )
 }

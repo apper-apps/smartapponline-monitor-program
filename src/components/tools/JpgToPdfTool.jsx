@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import FileUpload from '@/components/molecules/FileUpload'
+
 const JpgToPdfTool = () => {
   const [files, setFiles] = useState([])
   const [processing, setProcessing] = useState(false)
@@ -60,39 +60,9 @@ const JpgToPdfTool = () => {
     setFiles(newFiles)
   }
 
-return (
-    <>
-      <Helmet>
-        <title>JPG to PDF Converter - Convert Images to PDF Online | SmartAppOnline</title>
-        <meta name="description" content="Free online JPG to PDF converter. Convert multiple JPG images to a single PDF document instantly. No registration required, secure processing." />
-        <meta name="keywords" content="JPG to PDF, image to PDF converter, convert images, PDF creator, online converter, free PDF tool" />
-        <meta property="og:title" content="JPG to PDF Converter - Free Online Tool" />
-        <meta property="og:description" content="Convert JPG images to PDF documents instantly. Free, secure, and easy to use online converter." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="JPG to PDF Converter - Free Online Tool" />
-        <meta name="twitter:description" content="Convert JPG images to PDF documents instantly. Free, secure, and easy to use." />
-        <link rel="canonical" href={`${window.location.origin}/tools/4`} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "JPG to PDF Converter",
-            "description": "Free online tool to convert JPG images to PDF documents",
-            "url": `${window.location.origin}/tools/4`,
-            "applicationCategory": "UtilityApplication",
-            "operatingSystem": "Any",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            }
-          })}
-        </script>
-      </Helmet>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Input Section */}
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -252,9 +222,8 @@ return (
             <p>Upload JPG images to create a PDF</p>
           </div>
         )}
-</Card>
-      </div>
-    </>
+      </Card>
+    </div>
   )
 }
 

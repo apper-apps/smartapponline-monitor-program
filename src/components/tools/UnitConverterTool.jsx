@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import Input from '@/components/atoms/Input'
+
 const UnitConverterTool = () => {
   const [category, setCategory] = useState('length')
   const [fromUnit, setFromUnit] = useState('')
@@ -163,48 +163,9 @@ const UnitConverterTool = () => {
   const categoryData = conversions[category]
   const units = Object.keys(categoryData.units)
 
-return (
-    <>
-      <Helmet>
-        <title>Unit Converter - Convert Length, Weight, Temperature & More | SmartAppOnline</title>
-        <meta name="description" content="Free online unit converter for length, weight, temperature, area, volume, and speed. Convert between metric and imperial units instantly with accurate results." />
-        <meta name="keywords" content="unit converter, convert units, length converter, weight converter, temperature converter, metric imperial converter" />
-        <meta property="og:title" content="Unit Converter - Convert Length, Weight, Temperature & More" />
-        <meta property="og:description" content="Convert between different units of measurement instantly. Free online calculator for all unit conversions." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Unit Converter - Free Online Calculator" />
-        <meta name="twitter:description" content="Convert between different units of measurement instantly. Free online tool." />
-        <link rel="canonical" href={`${window.location.origin}/tools/19`} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Unit Converter",
-            "description": "Convert between different units of measurement including length, weight, temperature, area, volume, and speed",
-            "url": `${window.location.origin}/tools/19`,
-            "applicationCategory": "UtilityApplication",
-            "operatingSystem": "Any",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "featureList": [
-              "Length conversion",
-              "Weight conversion",
-              "Temperature conversion",
-              "Area conversion",
-              "Volume conversion",
-              "Speed conversion",
-              "Quick reference guide"
-            ]
-          })}
-        </script>
-      </Helmet>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Category & Input Section */}
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Category & Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -456,9 +417,8 @@ return (
             <li>• Bookmark this tool for quick access to conversions</li>
           </ul>
         </div>
-</Card>
-      </div>
-    </>
+      </Card>
+    </div>
   )
 }
 
