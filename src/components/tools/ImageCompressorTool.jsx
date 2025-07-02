@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import FileUpload from '@/components/molecules/FileUpload'
-
 const ImageCompressorTool = () => {
   const [file, setFile] = useState(null)
   const [processing, setProcessing] = useState(false)
@@ -66,9 +66,46 @@ const ImageCompressorTool = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
   }
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {/* Input Section */}
+return (
+    <>
+      <Helmet>
+        <title>Image Compressor - Reduce Image File Size Online Free | SmartAppOnline</title>
+        <meta name="description" content="Free online image compressor. Reduce JPG, PNG, WEBP file sizes without losing quality. Optimize images for web with adjustable quality settings." />
+        <meta name="keywords" content="image compressor, compress images, reduce file size, optimize images, image optimization, JPG compressor, PNG compressor" />
+        <meta property="og:title" content="Image Compressor - Reduce File Size Online" />
+        <meta property="og:description" content="Compress images without losing quality. Free online tool to reduce file sizes for web optimization." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Image Compressor - Reduce File Size Online" />
+        <meta name="twitter:description" content="Compress images without losing quality. Free online optimization tool." />
+        <link rel="canonical" href={`${window.location.origin}/tools/7`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Image Compressor",
+            "description": "Reduce image file sizes without losing quality for web optimization",
+            "url": `${window.location.origin}/tools/7`,
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Quality adjustment",
+              "Multiple image formats",
+              "Target size setting",
+              "Compression statistics",
+              "Before/after comparison"
+            ]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -229,8 +266,9 @@ const ImageCompressorTool = () => {
             <p>Upload an image to start compression</p>
           </div>
         )}
-      </Card>
-    </div>
+</Card>
+      </div>
+    </>
   )
 }
 

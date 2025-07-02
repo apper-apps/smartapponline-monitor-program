@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
-
 const JsonFormatterTool = () => {
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
@@ -136,9 +136,46 @@ const JsonFormatterTool = () => {
 
   const stats = getJsonStats()
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {/* Input Section */}
+return (
+    <>
+      <Helmet>
+        <title>JSON Formatter & Validator - Format, Validate, Minify JSON Online | SmartAppOnline</title>
+        <meta name="description" content="Free online JSON formatter and validator. Format, minify, and validate JSON data with syntax highlighting and error detection. Developer-friendly tool." />
+        <meta name="keywords" content="JSON formatter, JSON validator, JSON minifier, format JSON, validate JSON, JSON tool, developer tools" />
+        <meta property="og:title" content="JSON Formatter & Validator - Free Online Tool" />
+        <meta property="og:description" content="Format, validate, and minify JSON data online. Free developer tool with syntax highlighting." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="JSON Formatter & Validator - Free Online Tool" />
+        <meta name="twitter:description" content="Format, validate, and minify JSON data online. Free developer tool." />
+        <link rel="canonical" href={`${window.location.origin}/tools/15`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "JSON Formatter",
+            "description": "Format, validate, and minify JSON data online",
+            "url": `${window.location.origin}/tools/15`,
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "JSON formatting",
+              "JSON validation", 
+              "JSON minification",
+              "Syntax error detection",
+              "Statistics and analysis"
+            ]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Section */}
       <Card>
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-3">
@@ -327,8 +364,9 @@ const JsonFormatterTool = () => {
             </div>
           </div>
         )}
-      </Card>
-    </div>
+</Card>
+      </div>
+    </>
   )
 }
 

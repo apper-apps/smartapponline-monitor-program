@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import Input from '@/components/atoms/Input'
-
 const QrCodeGeneratorTool = () => {
   const [qrData, setQrData] = useState('')
   const [qrType, setQrType] = useState('text')
@@ -99,9 +99,46 @@ const QrCodeGeneratorTool = () => {
     }
   }, [qrData, qrType, size, errorLevel, backgroundColor, foregroundColor])
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {/* Input Section */}
+return (
+    <>
+      <Helmet>
+        <title>QR Code Generator - Create Custom QR Codes Online Free | SmartAppOnline</title>
+        <meta name="description" content="Free QR code generator for text, URLs, WiFi, contacts, and more. Customize colors, size, and error correction. Download high-quality QR codes instantly." />
+        <meta name="keywords" content="QR code generator, create QR code, custom QR code, QR code maker, free QR generator, barcode generator" />
+        <meta property="og:title" content="QR Code Generator - Create Custom QR Codes Free" />
+        <meta property="og:description" content="Generate custom QR codes for text, URLs, WiFi, and contacts. Free online tool with customization options." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="QR Code Generator - Create Custom QR Codes" />
+        <meta name="twitter:description" content="Generate custom QR codes for various data types. Free online tool." />
+        <link rel="canonical" href={`${window.location.origin}/tools/10`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "QR Code Generator",
+            "description": "Generate custom QR codes for text, URLs, WiFi, contacts, and more",
+            "url": `${window.location.origin}/tools/10`,
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Multiple QR code types",
+              "Color customization",
+              "Size adjustment",
+              "Error correction levels",
+              "High-quality downloads"
+            ]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -353,8 +390,9 @@ const QrCodeGeneratorTool = () => {
             <p>Enter data above to generate your QR code</p>
           </div>
         )}
-      </Card>
-    </div>
+</Card>
+      </div>
+    </>
   )
 }
 

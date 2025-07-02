@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import FileUpload from '@/components/molecules/FileUpload'
-
 const PdfToWordTool = () => {
   const [file, setFile] = useState(null)
   const [processing, setProcessing] = useState(false)
@@ -52,9 +52,39 @@ const PdfToWordTool = () => {
     setProcessing(false)
   }
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {/* Input Section */}
+return (
+    <>
+      <Helmet>
+        <title>PDF to Word Converter - Convert PDF to Editable DOCX Online | SmartAppOnline</title>
+        <meta name="description" content="Free online PDF to Word converter. Convert PDF documents to editable DOCX format while preserving formatting. Secure and fast processing." />
+        <meta name="keywords" content="PDF to Word, PDF to DOCX, convert PDF, editable document, PDF converter, document conversion, online converter" />
+        <meta property="og:title" content="PDF to Word Converter - Free Online Tool" />
+        <meta property="og:description" content="Convert PDF documents to editable Word format online. Free, secure, and preserves formatting." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PDF to Word Converter - Free Online Tool" />
+        <meta name="twitter:description" content="Convert PDF documents to editable Word format. Free and secure." />
+        <link rel="canonical" href={`${window.location.origin}/tools/1`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "PDF to Word Converter",
+            "description": "Convert PDF documents to editable Word DOCX format online",
+            "url": `${window.location.origin}/tools/1`,
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
@@ -164,8 +194,9 @@ const PdfToWordTool = () => {
             <p>Upload a PDF file to start conversion</p>
           </div>
         )}
-      </Card>
-    </div>
+</Card>
+      </div>
+    </>
   )
 }
 

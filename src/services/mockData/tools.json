@@ -1,9 +1,12 @@
 [
-  {
+{
     "Id": 1,
     "name": "PDF to Word",
     "categoryId": 1,
     "description": "Convert PDF documents to editable Word format",
+    "seoTitle": "PDF to Word Converter - Convert PDF to Editable DOCX Online",
+    "seoDescription": "Free online PDF to Word converter. Convert PDF documents to editable DOCX format while preserving formatting. Secure and fast processing.",
+    "seoKeywords": "PDF to Word, PDF to DOCX, convert PDF, editable document, PDF converter, document conversion",
     "icon": "FileText",
     "inputType": "file",
     "outputType": "download",
@@ -24,29 +27,35 @@
     "implemented": false
   },
   {
+{
     "Id": 3,
     "name": "PDF to JPG",
     "categoryId": 1,
     "description": "Convert PDF pages to high-quality JPG images",
+    "seoTitle": "PDF to JPG Converter - Convert PDF Pages to Images Online",
+    "seoDescription": "Free online PDF to JPG converter. Convert PDF pages to high-quality JPG images with adjustable quality settings. Fast and secure processing.",
+    "seoKeywords": "PDF to JPG, PDF to image, convert PDF pages, PDF converter, extract images from PDF",
     "icon": "FileImage",
     "inputType": "file",
     "outputType": "download",
     "usageCount": 18750,
     "featured": true,
     "implemented": true
-  },
   {
+{
     "Id": 4,
     "name": "JPG to PDF",
     "categoryId": 1,
     "description": "Convert JPG images to PDF documents",
+    "seoTitle": "JPG to PDF Converter - Convert Images to PDF Online Free",
+    "seoDescription": "Free online JPG to PDF converter. Convert multiple JPG images to a single PDF document instantly. No registration required, secure processing.",
+    "seoKeywords": "JPG to PDF, image to PDF converter, convert images, PDF creator, online converter",
     "icon": "FileText",
     "inputType": "file",
     "outputType": "download",
     "usageCount": 22100,
     "featured": true,
     "implemented": true
-  },
   {
     "Id": 5,
     "name": "PNG to PDF",
@@ -72,17 +81,20 @@
     "implemented": false
   },
   {
+{
     "Id": 7,
     "name": "Image Compressor",
     "categoryId": 2,
     "description": "Reduce image file size without losing quality",
+    "seoTitle": "Image Compressor - Reduce Image File Size Online Free",
+    "seoDescription": "Free online image compressor. Reduce JPG, PNG, WEBP file sizes without losing quality. Optimize images for web with adjustable quality settings.",
+    "seoKeywords": "image compressor, compress images, reduce file size, optimize images, image optimization",
     "icon": "Minimize2",
     "inputType": "file",
     "outputType": "download",
     "usageCount": 25600,
     "featured": true,
     "implemented": true
-  },
   {
     "Id": 8,
     "name": "Image Resizer",
@@ -108,41 +120,50 @@
     "implemented": false
   },
   {
+{
     "Id": 10,
     "name": "QR Code Generator",
     "categoryId": 2,
     "description": "Generate QR codes for text, URLs, and data",
+    "seoTitle": "QR Code Generator - Create Custom QR Codes Online Free",
+    "seoDescription": "Free QR code generator for text, URLs, WiFi, contacts, and more. Customize colors, size, and error correction. Download high-quality QR codes instantly.",
+    "seoKeywords": "QR code generator, create QR code, custom QR code, QR code maker, free QR generator",
     "icon": "QrCode",
     "inputType": "text",
     "outputType": "download",
     "usageCount": 31200,
     "featured": true,
     "implemented": true
-  },
   {
+{
     "Id": 11,
     "name": "Password Generator",
     "categoryId": 3,
     "description": "Create strong, secure passwords",
+    "seoTitle": "Password Generator - Create Strong Secure Passwords Online",
+    "seoDescription": "Generate strong, secure passwords with customizable options. Include uppercase, lowercase, numbers, and symbols. Free online password generator tool.",
+    "seoKeywords": "password generator, secure password, strong password, random password, password security",
     "icon": "Key",
     "inputType": "form",
     "outputType": "text",
     "usageCount": 28400,
     "featured": true,
     "implemented": true
-  },
   {
+{
     "Id": 12,
     "name": "Word Counter",
     "categoryId": 3,
     "description": "Count words, characters, and paragraphs",
+    "seoTitle": "Word Counter - Count Words, Characters, Paragraphs Online",
+    "seoDescription": "Free online word counter tool. Count words, characters, sentences, paragraphs, and reading time. Includes readability analysis and social media limits.",
+    "seoKeywords": "word counter, character counter, word count tool, text analysis, readability checker, writing tool",
     "icon": "Hash",
     "inputType": "text",
     "outputType": "display",
     "usageCount": 21300,
     "featured": true,
     "implemented": true
-  },
   {
     "Id": 13,
     "name": "Case Converter",
@@ -168,17 +189,20 @@
     "implemented": false
   },
   {
+{
     "Id": 15,
     "name": "JSON Formatter",
     "categoryId": 6,
     "description": "Format and validate JSON data",
+    "seoTitle": "JSON Formatter & Validator - Format, Validate, Minify JSON Online",
+    "seoDescription": "Free online JSON formatter and validator. Format, minify, and validate JSON data with syntax highlighting and error detection. Developer-friendly tool.",
+    "seoKeywords": "JSON formatter, JSON validator, JSON minifier, format JSON, validate JSON, developer tools",
     "icon": "Braces",
     "inputType": "text",
     "outputType": "text",
     "usageCount": 19700,
     "featured": true,
     "implemented": true
-  },
   {
     "Id": 16,
     "name": "CSS Gradient Generator",
@@ -192,17 +216,20 @@
     "implemented": false
   },
   {
+{
     "Id": 17,
     "name": "Age Calculator",
     "categoryId": 7,
     "description": "Calculate exact age in years, months, days",
+    "seoTitle": "Age Calculator - Calculate Your Exact Age in Years, Months, Days",
+    "seoDescription": "Free online age calculator. Calculate your exact age in years, months, days, hours, and minutes. Find your zodiac sign, age on other planets, and next birthday.",
+    "seoKeywords": "age calculator, calculate age, age in days, age in months, birthday calculator, exact age",
     "icon": "Calendar",
     "inputType": "form",
     "outputType": "display",
     "usageCount": 24300,
     "featured": true,
     "implemented": true
-  },
   {
     "Id": 18,
     "name": "BMI Calculator",
@@ -216,17 +243,20 @@
     "implemented": false
   },
   {
+{
     "Id": 19,
     "name": "Unit Converter",
     "categoryId": 7,
     "description": "Convert length, weight, temperature units",
+    "seoTitle": "Unit Converter - Convert Length, Weight, Temperature & More",
+    "seoDescription": "Free online unit converter for length, weight, temperature, area, volume, and speed. Convert between metric and imperial units instantly with accurate results.",
+    "seoKeywords": "unit converter, convert units, length converter, weight converter, temperature converter, metric imperial converter",
     "icon": "ArrowLeftRight",
     "inputType": "form",
     "outputType": "display",
     "usageCount": 22100,
     "featured": true,
     "implemented": true
-  },
   {
     "Id": 20,
     "name": "GST Calculator",

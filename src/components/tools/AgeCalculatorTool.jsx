@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
 import Input from '@/components/atoms/Input'
-
 const AgeCalculatorTool = () => {
   const [birthDate, setBirthDate] = useState('')
   const [targetDate, setTargetDate] = useState(new Date().toISOString().split('T')[0])
@@ -123,9 +123,47 @@ const AgeCalculatorTool = () => {
     setTargetDate(new Date().toISOString().split('T')[0])
   }
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      {/* Input Section */}
+return (
+    <>
+      <Helmet>
+        <title>Age Calculator - Calculate Your Exact Age in Years, Months, Days | SmartAppOnline</title>
+        <meta name="description" content="Free online age calculator. Calculate your exact age in years, months, days, hours, and minutes. Find your zodiac sign, age on other planets, and next birthday." />
+        <meta name="keywords" content="age calculator, calculate age, age in days, age in months, birthday calculator, exact age, zodiac sign calculator" />
+        <meta property="og:title" content="Age Calculator - Calculate Your Exact Age" />
+        <meta property="og:description" content="Calculate your exact age in years, months, days and more. Free online age calculator with detailed breakdown." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Age Calculator - Calculate Your Exact Age" />
+        <meta name="twitter:description" content="Calculate your exact age in years, months, days and more. Free online calculator." />
+        <link rel="canonical" href={`${window.location.origin}/tools/17`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Age Calculator",
+            "description": "Calculate exact age in years, months, days, hours, and minutes with additional fun facts",
+            "url": `${window.location.origin}/tools/17`,
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Exact age calculation",
+              "Age in different time units",
+              "Next birthday countdown",
+              "Zodiac sign detection",
+              "Age on other planets",
+              "Birth day of week"
+            ]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Input Section */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -291,8 +329,9 @@ const AgeCalculatorTool = () => {
             <p>Fun facts will appear here</p>
           </div>
         )}
-      </Card>
-    </div>
+</Card>
+      </div>
+    </>
   )
 }
 

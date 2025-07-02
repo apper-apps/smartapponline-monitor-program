@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { toast } from 'react-toastify'
 import ApperIcon from '@/components/ApperIcon'
 import Button from '@/components/atoms/Button'
 import Card from '@/components/atoms/Card'
-
 const PasswordGeneratorTool = () => {
   const [password, setPassword] = useState('')
   const [options, setOptions] = useState({
@@ -100,9 +100,45 @@ const PasswordGeneratorTool = () => {
     emerald: 'bg-emerald-500'
   }
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {/* Settings */}
+return (
+    <>
+      <Helmet>
+        <title>Password Generator - Create Strong Secure Passwords Online | SmartAppOnline</title>
+        <meta name="description" content="Generate strong, secure passwords with customizable options. Include uppercase, lowercase, numbers, and symbols. Free online password generator tool." />
+        <meta name="keywords" content="password generator, secure password, strong password, random password, password security, online generator" />
+        <meta property="og:title" content="Password Generator - Create Strong Secure Passwords" />
+        <meta property="og:description" content="Generate strong, secure passwords with customizable length and character options. Free online tool." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Password Generator - Create Strong Secure Passwords" />
+        <meta name="twitter:description" content="Generate strong, secure passwords with customizable options. Free online tool." />
+        <link rel="canonical" href={`${window.location.origin}/tools/11`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Password Generator",
+            "description": "Generate strong, secure passwords with customizable options",
+            "url": `${window.location.origin}/tools/11`,
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Customizable password length",
+              "Multiple character sets",
+              "Password strength indicator",
+              "Exclude similar characters option"
+            ]
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Settings */}
       <Card>
         <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -285,8 +321,9 @@ const PasswordGeneratorTool = () => {
             </ul>
           </div>
         </div>
-      </Card>
-    </div>
+</Card>
+      </div>
+    </>
   )
 }
 
